@@ -1,0 +1,243 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Playfair Display', serif;
+    color: #e5e5e5;
+    line-height: 1.8;
+    background: url('Images/background24.JPG') no-repeat center center fixed;
+    background-size: cover;
+    
+}
+
+/* Header */
+.Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    z-index: 1000;
+    background: transparent;
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.Header .logo img {
+    height: 50px;
+    transition: 0.5s ease;
+}
+
+.Header .logo img:hover {
+    filter: saturate(3);
+    transform: scale(1.1);
+}
+
+.Header .Navbar {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+
+/* Navbar */
+.Navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+/* Navbar */
+.Navbar a {
+    text-decoration: none;
+    color: #fbfbfc;
+    font-size: 18px;
+    padding: 10px 15px;
+    font-weight: 700;
+    position: relative;
+    transition: color 0.3s;
+}
+
+/* Correct hover underline */
+.Navbar a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0px; /* Fix underline position */
+    left: 0;
+    background-color: goldenrod;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Smooth hover effect */
+.Navbar a:hover {
+    color: gold;
+}
+
+.Navbar a:hover::before {
+    transform: scaleX(1);
+}
+
+/* Background */
+.background {
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    background: url('Images/background24.JPG') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Carousel / Swiper Styles */
+.swiper-container {
+    width: 30%; /* Center and enlarge the carousel */
+    height: 30vh;
+    margin: 120px auto 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+/* Swiper Slide */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Swiper Arrow Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    color: gold;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Place the arrows closer to the image */
+.swiper-button-next {
+    right: -50px;
+}
+
+.swiper-button-prev {
+    left: -50px;
+}
+
+/* Optional: Add hover effect to arrows */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    width: 70%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    position: relative;
+    top: 30px; /* Move down slightly */
+    z-index: 10;
+}
+
+/* Book Button */
+.book-btn {
+    background: linear-gradient(45deg, gold, goldenrod);
+    color: #222;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 223, 88, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.book-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Bottom Scroller */
+.tag-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    white-space: nowrap;
+}
+
+.tag-list li {
+    padding: 1rem;
+    background-color: transparent;
+    color: whitesmoke;
+    border-radius: 0.5rem;
+    display: inline-block;
+}
+
+/* Scroller */
+.scroller {
+    position: relative;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80px;
+    max-width: 1300px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Animation */
+.scroller_inner {
+    display: flex;
+    gap: 1rem;
+    animation: scroll 120s linear infinite;
+}
+
+/* Scrolling Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .swiper-container {
+        width: 90%;
+        height: 60vh;
+    }
+
+    .about {
+        width: 90%;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+        right: -10px;
+        left: -10px;
+    }
+}

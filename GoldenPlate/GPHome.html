@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="GPHome.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <title>Golden_Plate_Home</title>
+</head>
+
+<body>
+    <div class="background">
+        <!-- Header Section -->
+        <header>
+            <div id="header" class="Header">
+                <div class="logo">
+                    <img src="Images/Logo14.jpg" alt="Golden Plate Logo">
+                </div>
+                <div class="Navbar">
+                    <a href="GPContact.html">CONTACT</a>
+                    <a href="">GALLERY</a>
+                    <a href="">EVENT</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Carousel Section -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="Images/Land-and-Sea-FB.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="Images/Feature-1.jpg" alt="Feature 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="Images/garlic-butter-prime-rib-FT-RECIPE0621-fca73e5fa8e046b0b03982757db51628.jpg" alt="Feature 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="Images/Takara-3.jpg" alt="Feature 2">
+                </div>
+            </div>
+            <!-- Pagination & Arrows -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- About Section -->
+        <div class="about" data-aos="fade-up">
+            <p>Golden Plate is a unique and vibrant restaurant that offers a one-of-a-kind dining experience with its 7
+                themed days, each representing a different culinary journey. Every day of the week, guests can immerse
+                themselves in a new theme, ranging from exotic international cuisines to nostalgic retro dining or even
+                futuristic gastronomy. The restaurant prides itself on creativity, exceptional service, and a menu that
+                changes daily to match the theme, ensuring a fresh and exciting experience for every visit. Golden Plate
+                is more than just a meal—it’s an adventure for the senses!</p>
+
+                <form action="GPMenu.html" method="post">
+            <button class="book-btn">Menu</button></form>
+        </div>
+
+        <!-- Bottom Scroller -->
+        <div class="scroller" data-direction="left">
+            <ul class="tag-list scroller_inner">
+                <li>© Mediterranean Monday - Dish: Spanakopita (Greek spinach and feta phyllo pastry)</li>
+                <li>© Grilled Mediterranean Sea Bass</li>
+                <li>© Pasta & Grains - Dish: Shrimp Saganaki Orzo</li>
+                <li>© Vegetarian / Vegan Option - Dish: Vegetable Moussaka</li>
+                <li>© Desserts - Dish: Baklava</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="GPHome.js"></script>
+
+    <script>
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Initialize AOS for Animations
+        AOS.init();
+    </script>
+</body>
+
+</html>
